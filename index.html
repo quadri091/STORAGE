@@ -76,8 +76,18 @@
         td {
           width: 100%;
         }
+        .infocount {
+          max-width: 70px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
         .info {
           max-width: 120px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .infopass {
+          max-width: 100px;
           overflow: hidden;
           text-overflow: ellipsis;
         }
@@ -196,10 +206,10 @@
     tbody.innerHTML = "";
     for (let index = 0; index < array.length; index++) {
       tbody.innerHTML += `<tr>
-        <td class="info">${index + 1}</td>
-        <td class="info">${array[index].name}</td>
+        <td class="infocount">${index + 1}</td>
+        <td class="infopass">${array[index].name}</td>
         <td class="info">${array[index].email}</td>
-        <td class="info">${array[index].Password}</td>
+        <td class="infopass">${array[index].Password}</td>
         </tr>`;
     }
     console.log(array);
